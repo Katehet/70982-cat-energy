@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Sergey Vikhrov](https://up.htmlacademy.ru/adaptive/13/user/70982).
-* Наставник: `Неизвестно`.
+* Наставник: [Keks](https://htmlacademy.ru/).
 
 ---
 
