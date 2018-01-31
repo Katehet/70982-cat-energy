@@ -1,0 +1,66 @@
+.program {
+  border-top: 1px solid #cdcdcd;
+  color: #222222;
+}
+.program *::placeholder {
+  .oswald(16px; 18px);
+  color: @grayFont;
+  text-transform: uppercase;
+}
+.field {
+  .paddings-mobile;
+  border: none;
+  border-top: 3px solid @green;
+  text-transform: uppercase;
+
+  &:nth-of-type(1) {
+    border: none;
+  }
+  &:nth-of-type(2) {
+    margin-bottom: 27px;
+    padding: 20px;
+    border-top: 1px solid #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+.program__header {
+  .paddings-mobile;
+}
+.program__prolog {
+  .paddings-mobile;
+  .oswald(14px; 18px);
+  margin-bottom: 36px;
+  text-transform: uppercase;
+}
+.field__input {
+  .oswald(16px; 18px);
+  margin-bottom: 14px;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  box-shadow: none;
+  outline: none;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+  &:active,
+  &:focus {
+    border-color: @grayFont;
+  }
+}
+
+.field__label {
+  .oswald(16px; 18px);
+  margin-right: 20px;
+}
+.field__legend {
+  .oswald(24px; 24px);
+  margin-top: 27px;
+  margin-bottom: 27px;
+  padding-right: 20px;
+  text-transform: none;
+  color: @blackFont;
+}
+.program__comment .field__input {
+  resize: none;
+}
