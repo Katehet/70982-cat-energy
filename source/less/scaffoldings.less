@@ -2,10 +2,12 @@ html {
   font-family: "OswaldRegular";
   font-size: 14px;
   color: @blackFont;
+  background-color: #000000;
 }
 body {
   width: 320px;
   margin: 0 auto;
+  background-color: @white;
 }
 a {
   text-decoration: none;
@@ -16,3 +18,33 @@ a {
   content: "*";
   .oswald(16px; 18px);
 }
+.mobile-hidden {
+  display: none;
+}
+.image-tablet {
+  display: none;
+}
+@media (min-width: 768px) {
+  body {
+    width: 768px;
+    position: relative;
+    // background-image: url("../img/tablet/catalog-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0px;
+  }
+  .image-mobile {
+    display: none;
+  }
+  .image-tablet {
+    display: inline-block;
+  }
+  .mobile-hidden {
+    display: flex;
+  }
+}
+@media (min-width: 1440px) {
+  body {
+    width: 1440px;
+  }
+}
+

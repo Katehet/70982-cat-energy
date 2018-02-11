@@ -3,7 +3,6 @@
   .outline;
 }
 .main-menu__list {
-  // display: none;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -22,4 +21,31 @@
   position: absolute;
   right: 20px;
   top: -45px;
+}
+
+@media (min-width: 768px) {
+  .main-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-menu__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  .main-menu__button {
+    display: none;
+  }
+  .main-menu__item {
+    .oswald(18px; 18px);
+    border: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-menu {
+    margin-right: 90px;
+    // color: @white;
+  }
 }

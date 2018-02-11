@@ -1,23 +1,51 @@
 .contacts {
   .outline;
 }
-.contacts__wrapper {
-  .margins-mobile;
-}
 .contacts__invite {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  .outline;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 20px;
   background-color: #f2f2f2;
 }
 .contacts__left-col {
   .oswald(16px; 20px);
+  width: 120px;
   text-transform: uppercase;
 }
 .contacts__right-col {
   .arial(14px; 20px);
+  width: 120px;
+  // text-align: right;
 }
 .contacts__map {
-  width: 320px;
+  width: auto;
   min-height: 400px;
   background-color: #f4ebd6;
+}
+
+@media (min-width: 768px) {
+  .contacts__invite {
+    .paddings-tablet;
+  }
+  .contacts__left-col {
+    .oswald(20px; 25px);
+    width: 160px;
+  }
+  .contacts__right-col {
+    .arial(16px; 20px);
+    width: 160px;
+    text-align: right;
+  }
+  .contacts__map {
+    position: relative;
+    width: auto;
+  }
+  .map__pin {
+    position: absolute;
+    content: url("../img/tablet/map-pin.png");
+    bottom: 50%;
+    right: 45%;
+  }
 }

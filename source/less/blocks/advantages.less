@@ -3,14 +3,67 @@
   .outline;
 }
 .advantages__title {
-  .block-title;
+  .oswald(36px; 36px);
   margin-top: 20px;
   line-height: 60px;
 }
 .advantages__item {
+  .outline;
   margin-left: 82px;
-  font-family: "Arial";
-  font-size: 14px;
-  line-height: 18px;
+}
+.advantages__text {
+  .arial(14px; 18px);
   color: @grayFont;
+}
+
+@media (min-width: 768px) {
+  .advantages {
+    .margins-tablet;
+    z-index: 1;
+  }
+  .advantages__title {
+    .oswald(60px; 60px);
+  }
+  .advantages__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    counter-reset: advantage 0;
+  }
+  .advantages__item {
+    position: relative;
+    width: 300px;
+    margin-left: 0;
+    margin-right: 54px;
+    margin-bottom: 134px;
+    z-index: 2;
+
+  }
+  .advantages__text {
+    .arial(16px; 24px);
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    padding-top: 115px;
+
+    &::before {
+      .oswald(280px; 202px);
+      position: absolute;
+      top: 0;
+      left: 120px;
+      counter-increment: advantage 1;
+      content: counter(advantage) " ";
+      color: #f2f2f2;
+      z-index: -1;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .advantages__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .advantages__item {
+    width: 205px;
+  }
 }

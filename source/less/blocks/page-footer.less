@@ -7,9 +7,30 @@
   text-align: center;
 }
 .page-footer__title {
+  .outline;
   padding-top: 35px;
   padding-bottom: 25px;
 }
 .page-footer__producer {
+  .outline;
   padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .page-footer {
+    .paddings-tablet;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .page-footer__title {
+    padding: 0;
+  }
+  .page-footer__producer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 164px;
+  }
 }

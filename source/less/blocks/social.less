@@ -1,4 +1,5 @@
 .social {
+  .outline;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
   width: 90%;
@@ -12,14 +13,28 @@
   font-size: 0;
   background-color: @white;
   background-repeat: no-repeat;
+
+  &:nth-of-type(2) {
+    margin: 0 30px;
+  }
 }
-.link {
-  &-vkontakte {
+
+@media (min-width: 768px) {
+  .social__link:nth-of-type(2) {
+    margin: 0 25px;
   }
-  &-instagram {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-  &-facebook {
+  .link {
+    &-vkontakte {
+      width: 30px;
+      height: 16px;
+    }
+    &-instagram {
+      width: 23px;
+      height: 23px;
+    }
+    &-facebook {
+      width: 14px;
+      height: 28px;
+    }
   }
 }

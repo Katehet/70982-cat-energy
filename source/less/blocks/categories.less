@@ -23,3 +23,37 @@
   font-size: 16px;
   text-transform: uppercase;
 }
+@media (min-width: 768px) {
+  .categories__header {
+    .oswald(36px; 36px);
+    margin-left: 0;
+  }
+  .categories__description {
+    .arial(16px; 24px);
+    .outline;
+    width: 380px;
+    margin-bottom: 60px;
+  }
+  .categories__site {
+    .oswald(20px; 20px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .categories {
+    display: flex;
+    justify-content: space-between;
+  }
+  .categories__item {
+    width: 464px;
+    padding: 53px;
+  }
+  .categories__header {
+    margin-top: 80px;
+    margin-bottom: 70px;
+    margin-left: 215px;
+  }
+  .categories__description {
+    width: auto;
+  }
+}

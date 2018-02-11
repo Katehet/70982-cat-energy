@@ -27,7 +27,7 @@
   width: 280px;
   height: 289px;
   margin: 38px auto;
-  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-image: url("../img/mobile/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   text-align: center;
 }
@@ -37,4 +37,28 @@
   margin: 0 auto;
   padding-top: 190px;
   color: @white;
+}
+
+@media (min-width: 768px) {
+  .extra__title {
+    .oswald(36px; 36px);
+    padding: 0 35px;
+    margin-top: 70px;
+    margin-bottom: 75px;
+    border: none;
+    z-index: 10;
+    background-color: @white;
+  }
+  .extra {
+    padding: 0 30px;
+  }
+  .extra__good {
+    padding: 27px 38px;
+    border: 1px solid #e6e6e6;
+  }
+  .extra__bonus {
+    width: 100%;
+    background-image: url("../img/tablet/gift-photo-tablet.jpg");
+    background-repeat: no-repeat;
+  }
 }
