@@ -66,6 +66,7 @@
     text-align: right;
   }
   .example__live {
+    .outline;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -101,5 +102,40 @@
     border-radius: 50%;
     border: 12px solid @white;
     box-shadow: 0 0 0 1px #dcdcdc;
+  }
+}
+
+@media (min-width: 1440px) {
+  .example {
+    position: relative;
+    background-color: @grayBack;
+  }
+  .example__title {
+    background-color: @white;
+  }
+  .example__history {
+    .outline;
+    position: absolute;
+    top:300px;
+    width: 435px;
+  }
+  .example__result {
+    position: absolute;
+    top: 500px;
+  }
+  .example__cost {
+    .outline;
+    width: 350px;
+    left: 0;
+    bottom: 0;
+  }
+  .example__live {
+    width: 660px;
+    position: relative;
+    left: 600px;
+    bottom: 200px;
+  }
+  .example__image {
+    .outline;
   }
 }

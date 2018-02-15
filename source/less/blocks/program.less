@@ -1,0 +1,148 @@
+.program {
+  border-top: 1px solid #cdcdcd;
+  color: #222222;
+}
+.program *::placeholder {
+  .oswald(16px; 18px);
+  color: @grayFont;
+  text-transform: uppercase;
+}
+.field {
+  .oswald(16px; 18px);
+  .paddings-mobile;
+  border: none;
+  border-top: 3px solid @green;
+  text-transform: uppercase;
+
+  &:nth-of-type(1) {
+    border: none;
+  }
+  &:nth-of-type(2) {
+    margin-bottom: 27px;
+    padding: 20px;
+    border-top: 1px solid #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
+  }
+  &__row {
+    display: flex;
+    align-items: baseline;
+
+    & .field__input {
+      flex-grow: 1;
+    }
+  }
+}
+.program__header {
+  .paddings-mobile;
+}
+.program__prolog {
+  .paddings-mobile;
+  .oswald(14px; 18px);
+  margin-bottom: 36px;
+  text-transform: uppercase;
+}
+.field__input {
+  margin-bottom: 14px;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  box-shadow: none;
+  outline: none;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+  &:active,
+  &:focus {
+    border-color: @grayFont;
+  }
+}
+.field__label {
+  margin-right: 20px;
+}
+.field__legend {
+  .oswald(24px; 24px);
+  margin-top: 27px;
+  margin-bottom: 27px;
+  padding-right: 20px;
+  text-transform: none;
+  color: @blackFont;
+}
+.program__comment .field__input {
+  resize: none;
+}
+
+@media (min-width: 768px) {
+  .block-title {
+    .oswald(60px; 60px);
+  }
+  .program {
+    margin-bottom: 75px;
+  }
+  .program *::placeholder {
+    .oswald(20px; 20px);
+  }
+  .program__prolog {
+    .oswald(20px; 30px);
+    width: 330px;
+    margin-left: 70px;
+  }
+  .program__main {
+    margin-bottom: 72px;
+  }
+  .program__type {
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+    margin-bottom: 74px;
+    border: 1px solid #cdcdcd;
+
+    & .field__label {
+      margin-left: 88px;
+    }
+  }
+  .program__comment {
+
+    .field__input {
+      width: 100%;
+      }
+  }
+  .program__submit {
+    .oswald(20px; 17px);
+    margin-left: 70px;
+  }
+  .field {
+    .oswald(20px; 20px);
+    margin-top: 64px;
+    margin-bottom: 70px;
+    padding-left: 70px;
+    padding-right: 67px;
+  }
+  .field__legend {
+    .oswald(36px; 36px);
+    margin-bottom: 70px;
+  }
+  .program__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .field__label {
+      width: 275px;
+    }
+  }
+  .required-note {
+    .arial(16px; 16px);
+    position: absolute;
+    right: 200px;
+  }
+}
+@media (min-width: 1440px) {
+  .program__submit {
+    width: 560px;
+    padding: 25px;
+    line-height: 0;
+  }
+  .required-note {
+    position: absolute;
+    left: 700px;
+  }
+}
