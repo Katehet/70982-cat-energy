@@ -3,13 +3,16 @@
   background-color: @grayBack;
 }
 .example__title {
-  .block-title;
+  .oswald(36px; 36px);
 }
 .example__history  {
   .arial(14px; 16px);
   color: @grayFont;
 }
-
+.example__result {
+  .outline;
+  display: inline-flex;
+}
 .result-data__data-value {
   font-size: 24px;
   line-height: 24px;
@@ -23,6 +26,116 @@
   text-transform: uppercase;
 }
 .example__status {
-  font-size: 16px;
-  line-height: 20px;
+  .oswald(16px; 20px);
+  position: relative;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px dotted #b8b8b8;
+  }
+}
+
+@media (min-width: 768px) {
+  .example {
+    .margins-tablet;
+    padding: 0;
+    background-color: @white;
+  }
+  .example__title {
+    .oswald(60px; 60px);
+  }
+  .example__history {
+  .arial(16px; 24px);
+  }
+  .result-data__data-value {
+    .oswald(30px; 37px);
+  }
+  .result-data__data-transcript {
+    .arial(14px; 14px);
+  }
+  .example__cost {
+    .oswald(20px; 20px);
+    position: absolute;
+    width: 180px;
+    right: 30px;
+    text-align: right;
+  }
+  .example__live {
+    .outline;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 75px;
+  }
+  .image-tablet {
+    position: relative;
+  }
+  .example__toggle-bar {
+    .outline;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 67px;;
+  }
+  .example__status {
+    .oswald(20px; 20px);
+  }
+  .example__scale {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 430px;
+    height: 6px;
+    margin: 0 23px;
+    background-color: #dcdcdc;
+  }
+  .example__toggle {
+    width: 8px;
+    height: 8px;
+    background-color: @green;
+    border-radius: 50%;
+    border: 12px solid @white;
+    box-shadow: 0 0 0 1px #dcdcdc;
+  }
+}
+
+@media (min-width: 1440px) {
+  .example {
+    position: relative;
+    background-color: @grayBack;
+  }
+  .example__title {
+    background-color: @white;
+  }
+  .example__history {
+    .outline;
+    position: absolute;
+    top:300px;
+    width: 435px;
+  }
+  .example__result {
+    position: absolute;
+    top: 500px;
+  }
+  .example__cost {
+    .outline;
+    width: 350px;
+    left: 0;
+    bottom: 0;
+  }
+  .example__live {
+    width: 660px;
+    position: relative;
+    left: 600px;
+    bottom: 200px;
+  }
+  .example__image {
+    .outline;
+  }
 }

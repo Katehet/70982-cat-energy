@@ -1,0 +1,1 @@
+[2018-02-11 22:01:42] layer "right-arrow-long.svg": Duplicate path: right-arrow-long.svg

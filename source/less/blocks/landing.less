@@ -10,13 +10,13 @@
   color: @white;
 }
 .landing__title {
-  .block-title;
+  .oswald(36px; 36px);
   margin-bottom: 15px;
 }
 .landing__promo {
   min-height: 305px;
   background-color: @green;
-  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-image: url("../img/mobile/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   text-align: center;
   color: inherit;
@@ -25,4 +25,70 @@
   position: absolute;
   top: 166px;
   left: 20px;
+  z-index: 1;
+}
+.landing__promo::before {
+  position: absolute;
+  content: url("/img/desktop/index-background-desktop.jpg");
+  top: -100px;
+  right: -30px;
+}
+
+@media (min-width: 768px) {
+  .landing {
+    .margins-tablet;
+    color: @blackFont;
+  }
+  .landing__promo {
+    .outline;
+    background-image: none;
+    background-color: transparent;
+    align-self: flex-start;
+    margin-left: 90px;
+    text-align: left;
+  }
+  .landing__title {
+    .oswald(60px; 60px);
+    width: 415px;
+    margin-bottom: 30px;
+  }
+  .landing__slogan {
+    .oswald(20px; 20px);
+    position: relative;
+    z-index: 10;
+  }
+  .landing__promo-image {
+    .outline;
+    position: relative;
+    top: -90px;
+    left: 30px;
+  }
+  .landing__select {
+    position: absolute;
+    top: 250px;
+    left: 90px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .landing {
+    min-height: 610px;
+  }
+  .landing__promo-image {
+    .outline;
+    position: absolute;
+    top: 0;
+    left: 490px;
+  }
+  .landing__title {
+    margin-top: 90px;
+  }
+  .landing__select {
+    .oswald(20px; 0px);
+    top: 300px;
+    padding: 26px;
+  }
+  .landing__promo {
+    min-height: 355px;
+  }
 }
