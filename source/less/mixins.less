@@ -1,12 +1,13 @@
 .arial (@size; @height) {
-  font-family: "Arial";
+  font-family: "Arial", sans-serif;
   font-size: @size;
   line-height: @height;
 }
 .oswald (@size; @height) {
-  font-family: "OswaldRegular";
+  font-family: "OswaldRegular", "Arial Narrow", "Arial", sans-serif;
   font-size: @size;
   line-height: @height;
+  font-weight: 400;
 }
 .margins-mobile {
   margin-left: 20px;
@@ -25,5 +26,9 @@
   padding-right: 30px;
   }
 .outline {
-  outline: 2px solid red;
+  outline: none;
+}
+.required::after {
+  content: "*";
+  .oswald(16px; 18px);
 }

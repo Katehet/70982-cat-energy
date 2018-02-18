@@ -6,6 +6,12 @@
 .page-footer__logo {
   text-align: center;
 }
+.page-footer__logo:hover {
+  opacity: 0.8;
+}
+.page-footer__logo:active {
+  opacity: 0.6;
+}
 .page-footer__title {
   .outline;
   padding-top: 35px;
@@ -13,7 +19,14 @@
 }
 .page-footer__producer {
   .outline;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 20px;
+}
+.producer__company {
+  .arial (16px; 16px);
+  color: @grayFont;
 }
 
 @media (min-width: 768px) {

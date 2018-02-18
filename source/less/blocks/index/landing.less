@@ -12,26 +12,27 @@
 .landing__title {
   .oswald(36px; 36px);
   margin-bottom: 15px;
+
+}
+.landing__slogan {
+  text-transform: uppercase;
 }
 .landing__promo {
   min-height: 305px;
-  background-color: @green;
+  background-color: #63a83b;
   background-image: url("../img/mobile/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-position: 50%;
   text-align: center;
   color: inherit;
 }
 .landing__promo-image {
   position: absolute;
   top: 166px;
-  left: 20px;
-  z-index: 1;
+//  left: 20px;
 }
-.landing__promo::before {
-  position: absolute;
-  content: url("/img/desktop/index-background-desktop.jpg");
-  top: -100px;
-  right: -30px;
+.landing__select {
+  line-height: 16px;
 }
 
 @media (min-width: 768px) {
@@ -46,6 +47,7 @@
     align-self: flex-start;
     margin-left: 90px;
     text-align: left;
+    min-height: 0;
   }
   .landing__title {
     .oswald(60px; 60px);
@@ -60,25 +62,35 @@
   .landing__promo-image {
     .outline;
     position: relative;
-    top: -90px;
-    left: 30px;
+    top: 24px;
+    left: 34px;
   }
   .landing__select {
+    .oswald(20px; 00px);
     position: absolute;
-    top: 250px;
+    padding: 25px 0;
+    top: 262px;
     left: 90px;
+    width: 243px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1300px) {
   .landing {
     min-height: 610px;
+  }
+  .landing__promo::before {
+    position: absolute;
+    content: url("../img/desktop/index-background-desktop.jpg");
+    top: -100px;
+    right: -30px;
   }
   .landing__promo-image {
     .outline;
     position: absolute;
     top: 0;
     left: 490px;
+    z-index: 1;
   }
   .landing__title {
     margin-top: 90px;

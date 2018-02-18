@@ -3,8 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTML Academy: Кэт энерджи</title>
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,14 +15,16 @@
   <header class="header">
     <div class="top-bar">
       <a class="top-bar__logo" href="/index.html">
-        <img class="top-bar__logo logo-mobile image-mobile" src="img/mobile/icon-logo-mobile.svg" alt="logo" width="33" height="38">
-        <img class="top-bar__logo logo-tablet image-tablet" src="img/tablet/logo-tablet.png" alt="logo" width="173" height="58">
+        <img class="top-bar__logo-image image-mobile" src="img/mobile/icon-logo-mobile.svg" alt="logo" width="33" height="38">
+        <img class="top-bar__logo-image image-tablet" src="img/tablet/logo-tablet.png" alt="logo" width="173" height="58">
       </a>
-      <img class="top-bar__title image-mobile" src="../img/mobile/logo-mobile-header.svg" width="128" height="24">
+      <a href="index.html">
+        <img class="top-bar__title image-mobile" src="img/mobile/logo-mobile-header.svg" alt="logo" width="101" height="18">
+      </a>
     </div>
     <nav class="main-menu">
-      <button class="main-menu__button">Меню</button>
-      <ul class="main-menu__list mobile-hidden">
+      <button class="main-menu__button no-js-button">Меню</button>
+      <ul class="main-menu__list mobile-only no-js-menu">
         <li class="main-menu__item">
           <a href="index.html">Главная</a>
         </li>
@@ -42,58 +46,58 @@
       <fieldset class="program__main field">
         <div class="field__row">
           <label class="field__label required" for="cat-name">Имя:</label>
-          <input class="field__input" type="text" placeholder="Барсик" id="cat-name" name="cat-name" required>
+          <input class="field__input field__input--box" type="text" placeholder="Барсик" id="cat-name" name="cat-name" required>
         </div>
         <div class="field__row">
           <label class="field__label required" for="cat-weight">Вес (кг):</label>
-          <input class="field__input" type="number" placeholder="7" id="cat-weight" name="cat-weight" required>
+          <input class="field__input field__input--box" type="number" placeholder="7" id="cat-weight" name="cat-weight" required>
         </div>
         <div class="field__row">
           <label class="field__label" for="cat-age">Возраст (лет):</label>
-          <input class="field__input" type="number" placeholder="7" id="cat-age" name="cat-age">
+          <input class="field__input field__input--box" type="number" placeholder="7" id="cat-age" name="cat-age">
         </div>
       </fieldset>
       <fieldset class="program__type field">
-        <input class="field__input" type="radio" name="program-type" id="weight-loss" value="weight-loss" checked>
-        <label class="field__label" for="weight-loss">Похудение</label>
-        <input class="field__input" type="radio" name="program-type" id="weight-plus" value="weight-plus">
-        <label class="field__label" for="weight-plus">Набор массы</label>
-        <input class="field__input" type="radio" name="program-type" id="need-help" value="need-help">
-        <label class="field__label" for="need-help">Не знаю (нужен ваш совет)</label>
+        <input class="field__input program__radio" type="radio" name="program-type" id="weight-loss" value="weight-loss" checked>
+        <label class="field__label program__radio-label" for="weight-loss">Похудение</label>
+        <input class="field__input program__radio" type="radio" name="program-type" id="weight-plus" value="weight-plus">
+        <label class="field__label program__radio-label" for="weight-plus">Набор массы</label>
+        <input class="field__input program__radio" type="radio" name="program-type" id="need-help" value="need-help">
+        <label class="field__label program__radio-label" for="need-help">Не знаю (нужен ваш совет)</label>
       </fieldset>
       <fieldset class="program__contacts field">
-        <legend class="field__legend">Контактные данные (владельца кота)</legend>
-        <div class="field__row">
-          <label class="field__label required" for="email">E-mail:</label>
-          <input class="field__input" type="email" name="email" id="email" placeholder="example@example.com" required>
+        <legend class="field__legend program__subtitle">Контактные данные (владельца кота)</legend>
+        <div class="field__row email">
+          <label class="field__label email__label required" for="email">E-mail:</label>
+          <input class="field__input email__input field__input--box" type="email" name="email" id="email" placeholder="example@example.com" required>
         </div>
-        <div class="field__row"></div>
-          <label class="field__label required" for="tel">Телефон:</label>
-          <input class="field__input" type="tel" name="tel" id="tel" placeholder="+7 987 65 43 21" required>
+        <div class="field__row phone">
+          <label class="field__label phone__label required" for="tel">Телефон:</label>
+          <input class="field__input phone__input field__input--box" type="tel" name="tel" id="tel" placeholder="+7 987 65 43 21" required>
         </div>
       </fieldset>
       <fieldset class="program__comment field">
-        <legend class="field__legend">Комментарий</legend>
-        <textarea class="field__input" name="comment" id="comment" cols="30" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+        <legend class="field__legend program__subtitle">Комментарий</legend>
+        <textarea class="field__input program__comment-area field__input--box" name="comment" id="comment" cols="30" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
       </fieldset>
-      <fieldset class="program__additional field">
-        <legend class="field__legend">Дополнительно</legend>
+      <fieldset class="program__additional additional field">
+        <legend class="field__legend program__subtitle">Дополнительно</legend>
         <div class="program__wrapper">
-          <input type="checkbox" name="sweetener" id="sweetener">
-          <label class="field__label" for="sweetener">Сахарозаменитель</label>
-          <input type="checkbox" name="water" id="water">
-          <label class="field__label" for="water">Питьевая вода</label>
-          <input type="checkbox" name="milk" id="milk">
-          <label class="field__label" for="milk">Молоко</label>
-          <input type="checkbox" name="vitamins" id="vitamins">
-          <label class="field__label" for="vitamins">Витамины</label>
+          <input class="field__input additional__input" type="checkbox" name="sweetener" id="sweetener">
+          <label class="field__label additional__label" for="sweetener">Сахарозаменитель</label>
+          <input class="field__input additional__input" type="checkbox" name="water" id="water">
+          <label class="field__label additional__label" for="water">Питьевая вода</label>
+          <input class="field__input additional__input" type="checkbox" name="milk" id="milk">
+          <label class="field__label additional__label" for="milk">Молоко</label>
+          <input class="field__input additional__input" type="checkbox" name="vitamins" id="vitamins">
+          <label class="field__label additional__label" for="vitamins">Витамины</label>
         </div>
       </fieldset>
       <div class="required-note">* &mdash; Обязательные поля</div>
       <button class="program__submit button" type="submit">Отправить заявку</button>
     </form>
     <section class="contacts">
-      <div class="contacts__invite">
+      <div class="contacts__invite invite-in-form">
         <p class="contacts__left-col">
           Приглашаем к сотрудничеству дилеров!
         </p>
@@ -101,26 +105,27 @@
           ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
         </p>
       </div>
-      <div name="contacts__map" class="contacts__map">
+      <div class="contacts__map">
         <!-- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2034ac6c9f70dd670c70f7ab75b84365876837213bdaba4ac20f069ca92cd1ce&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe> -->
+        <span class="map__pin"></span>
       </div>
     </section>
     <footer class="page-footer">
       <a class="page-footer__logo">
-        <img class="page-footer__title" src="../img/mobile/logo-mobile-header.svg" width="128" height="24">
+        <img class="page-footer__title" src="img/mobile/logo-mobile-header.svg" alt="logo" width="128" height="24">
       </a>
       <div class="page-footer__social social">
         <a href="#" class="social__link link-vkontakte">
-          <img src="../img/mobile/icon-vk-mobile.svg" alt="vk" width="22" height="12">Мы Вконтакте</a>
+          <img src="img/mobile/icon-vk-mobile.svg" alt="vk" width="22" height="12">Мы Вконтакте</a>
         <a href="#" class="social__link link-instagram">
-          <img src="../img/mobile/icon-insta-mobile.svg" alt="vk" width="16" height="16">Наш Инстаграм</a>
+          <img src="img/mobile/icon-insta-mobile.svg" alt="vk" width="16" height="16">Наш Инстаграм</a>
         <a href="#" class="social__link link-facebook">
-          <img src="../img/mobile/icon-fb-mobile.svg" alt="vk" width="10" height="19">Мы в Facebook</a>
+          <img src="img/mobile/icon-fb-mobile.svg" alt="vk" width="10" height="19">Мы в Facebook</a>
       </div>
       <div class="page-footer__producer producer">
         <a href="https://htmlacademy.ru/intensive/adaptive" class="producer__company">HTML Academy</a>
         <a href="https://htmlacademy.ru/intensive/adaptive" class="producer__logo">
-          <img class="producer__logo-image" src="../img/mobile/logo-htmlacademy.svg" alt="HTMLAcademy" width="27" height="34">
+          <img class="producer__logo-image" src="img/mobile/logo-htmlacademy.svg" alt="HTMLAcademy" width="27" height="34">
         </a>
       </div>
     </footer>

@@ -1,11 +1,13 @@
 html {
-  font-family: "OswaldRegular";
-  font-size: 14px;
+  .oswald(14px; 14px);
   color: @blackFont;
   background-color: #000000;
+  box-sizing: border-box;
+  cursor: default;
 }
 body {
   width: 320px;
+//  width: auto;
   margin: 0 auto;
   background-color: @white;
 }
@@ -14,12 +16,11 @@ a {
   color: inherit;
   cursor: pointer;
 }
-.required::after {
-  content: "*";
-  .oswald(16px; 18px);
-}
-.mobile-hidden {
+.mobile-only {
   display: none;
+}
+.mobile-only.no-js-menu {
+  display: block;
 }
 .image-tablet {
   display: none;
@@ -27,8 +28,8 @@ a {
 @media (min-width: 768px) {
   body {
     width: 768px;
+//    width: auto;
     position: relative;
-    // background-image: url("../img/tablet/catalog-tablet.jpg");
     background-repeat: no-repeat;
     background-position: 0 0px;
   }
@@ -38,12 +39,15 @@ a {
   .image-tablet {
     display: inline-block;
   }
-  .mobile-hidden {
+  .mobile-only {
     display: flex;
   }
+  .mobile-only.no-js-menu {
+    display: none;
+  }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1300px) {
   body {
-    width: 1440px;
+    width: 1300px;
   }
 }
