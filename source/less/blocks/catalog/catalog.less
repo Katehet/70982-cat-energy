@@ -5,11 +5,13 @@
   margin: 0;
   padding: 29px 20px 37px 20px;
 }
+
 .catalog__goods {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .catalog__item {
   .outline;
   .paddings-mobile;
@@ -20,15 +22,18 @@
   width: 280px;
   border-bottom: 1px solid #cdcdcd;
 }
+
 .item__wrapper {
   display: flex;
   align-items: center;
 }
+
 .item__description {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
+
 .item__name {
   .oswald(16px; 20px);
   margin: 0;
@@ -36,17 +41,21 @@
   width: 75px;
   text-transform: uppercase;
 }
+
 .item__data-table {
   display: table;
   margin: 0;
   padding: 0;
   padding-bottom: 20px;
+  border-collapse: collapse;
 }
+
 .item__table-row {
   display: table-row;
   padding: 0;
   margin: 0;
 }
+
 .item__table-cell {
   .arial(12px; 16px);
   display: table-cell;
@@ -54,40 +63,48 @@
   margin: 0;
   width: 67px;
 }
+
 .item__table-cell:nth-of-type(2n) {
   text-align: right;
 }
+
 .catalog .button {
   .oswald(16px; 16px);
 }
+
 .item__order-button {
   margin-bottom: 24px;
 }
+
 .show-more {
   .paddings-mobile;
   display: flex;
-  ;flex-direction: column;
+  flex-direction: column;
   align-items: center;
   border-bottom: 1px solid #d9d9d9;
 }
+
 .show-more__icon {
   display: block;
-  background-image: url("../img/mobile/icon-plus-mobile.svg");
+  background-image: url("../img/icon-plus-mobile.svg");
   background-repeat: no-repeat;
   width: 30px;
   height: 30px;
-  margin: 20px auto;
+  margin:25px auto;
   opacity: 0.2;
 }
+
 .show-more__title {
   .oswald(16px; 20px);
   margin-bottom: 10px;
   text-transform: uppercase;
 }
+
 .show-more__text {
   .arial(12px; 16px);
   color: @grayFont;
 }
+
 .show-more__show-button {
   margin-top: 20px;
   margin-bottom: 25px;
@@ -95,35 +112,42 @@
   color: @blackFont;
   .oswald(16px; 20px);
 }
+
 .show-more__show-button:hover {
   background-color: #ebebeb;
 }
+
 .show-more__show-button:active {
   color: #b9b9b9;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet) {
   .catalog {
     padding-top: 60px;
   }
+
   .catalog__title {
     .oswald(60px; 60px);
-    margin-top: 0;
+    margin: 0;
     margin-left: 30px;
+    padding: 0;
     border: none;
   }
+
   .catalog__goods {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0;
     margin: 0 30px;
-    margin-top: 10px;
+    margin-top: 24px;
   }
+
   .catalog__item {
     padding: 0;
     background-color: @grayBack;
   }
+
   .item {
     position: relative;
     display: flex;
@@ -135,43 +159,55 @@
     margin-top: 140px;
     border: none;
   }
+
   .item__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .item__photo {
     position: absolute;
     bottom: 305px;
   }
+
   .item__description {
     align-items: center;
+    min-height: 188px;
   }
+
   .item__name {
     .oswald(20px; 20px);
     width: 150px;
+    margin-bottom: 18px;
     text-align: center;
     text-transform: uppercase;
   }
+
   .item__data-table {
     display: table;
     width: 250px;
     padding-bottom: 30px;
   }
+
   .item__table-cell {
     .arial(16px; 16px);
     display: table-cell;
     padding: 8px 0;
     border-bottom: 1px solid #cdcdcd;
   }
+
   .catalog .button {
+    width: 250px;
     margin-bottom: 40px;
   }
+
   .show-more {
     justify-content: center;
     border: 1px solid #e6e6e6;
     box-sizing: border-box;
   }
+
   .show-more__icon {
     position: absolute;
     width: 60px;
@@ -180,26 +216,56 @@
     margin: 0;
     background-repeat: no-repeat;
   }
+
   .show-more__title {
     .oswald(20px; 20px);
     width: 140px;
     margin-bottom: 25px;
     text-align: center;
   }
+
   .show-more__text {
     .arial(16px; 20px);
     width: 170px;
     text-align: center;
   }
+
   .show-more__show-button {
     position: absolute;
     bottom: 0;
     margin-top: auto;
   }
 }
-@media (min-width: 1300px) {
-  .catalog__goods {
 
+@media (min-width: @desktop) {
+  .catalog {
+    margin-bottom: 30px;
+    padding-top: 70px;
   }
 
+  .catalog__title {
+    .oswald(60px; 60px);
+    margin: 0;
+    margin-top: 18px;
+    padding: 0;
+    padding-left: 40px;
+  }
+
+  .catalog__goods {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .item {
+    width: 245px;
+    margin-right: 0px;
+  }
+
+  .item__data-table {
+    width: 168px;
+  }
+
+  .catalog .button {
+    width: 170px;
+  }
 }

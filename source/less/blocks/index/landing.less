@@ -9,97 +9,118 @@
   margin-bottom: 22px;
   color: @white;
 }
+
 .landing__title {
   .oswald(36px; 36px);
-  margin-bottom: 15px;
-
+  margin-top: 28px;
+  margin-bottom: 24px;
 }
+
 .landing__slogan {
   text-transform: uppercase;
 }
+
 .landing__promo {
   min-height: 305px;
   background-color: #63a83b;
-  background-image: url("../img/mobile/index-background-mobile@1x.jpg");
+  background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
   text-align: center;
   color: inherit;
 }
+
 .landing__promo-image {
   position: absolute;
   top: 166px;
-//  left: 20px;
 }
+
 .landing__select {
   line-height: 16px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet) {
   .landing {
     .margins-tablet;
+    margin-bottom: 0;
     color: @blackFont;
   }
+
   .landing__promo {
     .outline;
     background-image: none;
     background-color: transparent;
     align-self: flex-start;
-    margin-left: 90px;
+    margin-left: 86px;
+    margin-top: 30px;
     text-align: left;
     min-height: 0;
   }
+
   .landing__title {
     .oswald(60px; 60px);
     width: 415px;
-    margin-bottom: 30px;
+    margin-bottom: 42px;
   }
+
   .landing__slogan {
     .oswald(20px; 20px);
     position: relative;
     z-index: 10;
   }
+
   .landing__promo-image {
     .outline;
     position: relative;
-    top: 24px;
-    left: 34px;
+    top: 0;
+    left: 0;
   }
+
   .landing__select {
     .oswald(20px; 00px);
     position: absolute;
     padding: 25px 0;
-    top: 262px;
+    top: 285px;
     left: 90px;
     width: 243px;
   }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: @desktop) {
   .landing {
     min-height: 610px;
+    margin-bottom: 68px;
   }
+
+  .landing__promo {
+    margin-left: 90px;
+  }
+
   .landing__promo::before {
     position: absolute;
     content: url("../img/desktop/index-background-desktop.jpg");
     top: -100px;
-    right: -30px;
+    right: -100px;
   }
+
   .landing__promo-image {
     .outline;
     position: absolute;
-    top: 0;
-    left: 490px;
+    top: 43px;
+    left: 460px;
     z-index: 1;
   }
+
   .landing__title {
-    margin-top: 90px;
+    margin-top: 94px;
   }
+
   .landing__select {
     .oswald(20px; 0px);
-    top: 300px;
+    top: 358px;
     padding: 26px;
   }
+
   .landing__promo {
     min-height: 355px;
   }

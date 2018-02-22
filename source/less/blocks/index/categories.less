@@ -1,6 +1,7 @@
 .categories {
   .outline;
 }
+
 .categories__item {
   .outline;
   .margins-mobile;
@@ -9,10 +10,11 @@
   margin-bottom: 20px;
   background-color: @grayBack;
 }
+
 .categories__header {
   margin-top: 0;
-  margin-left: 92px;
-  padding-top: 10px;
+  margin-left: 70px;
+  padding-top: 9px;
   padding-bottom: 7px;
   font-size: 24px;
   line-height: 37px;
@@ -26,36 +28,45 @@
     background-color: @green;
     border-radius: 50%;
     left: 20px;
-    top: 23px;
+    top: 28px;
   }
 }
+
+.categories__header--pro {
+  margin-top: 6px;
+}
+
 .categories__icon {
   position: absolute;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .categories__icon-slim {
   left: 20px;
   top: 20px;
   width: 50px;
   height: 50px;
-  background-image: url(../img/mobile/icon-cat-slim.svg);
+  background-image: url("../img/icon-cat-slim.svg");
 }
+
 .categories__icon-pro {
   left: 10px;
-  top: 13px;
+  top: 18px;
   width: 70px;
   height: 70px;
-  background-image: url(../img/mobile/icon-cat-pro.svg);
+  background-image: url("../img/icon-cat-pro.svg");
 }
+
 .categories__description {
   margin-bottom: 20px;
   padding-bottom: 22px;
-  font-family: "Arial";
+  font-family: "Arial", sans-serif;
   line-height: 18px;
   color: @grayFont;
   border-bottom: 1px solid #cdcdcd;
 }
+
 .categories__site {
   font-size: 16px;
   text-transform: uppercase;
@@ -63,47 +74,54 @@
   &::after {
     position: absolute;
     left: 116px;
-    content: url("../img/mobile/icon-right-arrow-long.svg");
+    content: url("../img/icon-right-arrow-long.svg");
     width: 24px;
   }
-}
-.categories__site:hover::after {
-  position: absolute;
-  left: 116px;
-  content: url("../img/mobile/right-arrow-verylong.png");
-  width: 33px;
-}
-.categories__site:active,
-.categories__site:active::after {
-  opacity: 0.3;
+
+  &:hover::after {
+    position: absolute;
+    left: 116px;
+    content: url("../img/right-arrow-verylong.png");
+    width: 33px;
+  }
+
+  &:active,
+  &:active::after {
+    opacity: 0.3;
+  }
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet) {
   .categories__item {
     .margins-tablet;
     padding-bottom: 60px;
     margin-bottom: 30px;
   }
+
   .categories__header {
     .oswald(36px; 36px);
     margin-left: 33px;
     margin-top: 48px;
+    margin-bottom: 18px;
 
     &::before {
       width: 200px;
       height: 200px;
-      left: 440px;
+      left: 448px;
       top: 92px;
+      z-index: 5;
     }
   }
+
   .categories__description {
     .arial(16px; 24px);
     .outline;
     width: 384px;
     margin-left: 33px;
-    margin-bottom: 38px;
+    margin-bottom: 34px;
     border: none;
   }
+
   .categories__site {
     .oswald(20px; 20px);
     margin-left: 33px;
@@ -111,42 +129,81 @@
     &::after {
       left: 182px;
     }
+
     &:hover::after {
       left: 182px;
     }
   }
+
   .categories__icon-slim {
-    left: 20px;
-    top: 20px;
-    width: 50px;
-    height: 50px;
-    background-image: url(../img/mobile/icon-cat-slim.svg);
-  }
-  .categories__icon-pro {
-    left: 10px;
-    top: 13px;
-    width: 70px;
-    height: 70px;
-    background-image: url(../img/mobile/icon-cat-pro.svg);
+    left: 450px;
+    top: 83px;
+    width: 190px;
+    height: 190px;
+    background-image: url("../img/icon-cat-slim.svg");
+    z-index: 10;
   }
 
+  .categories__icon-pro {
+    left: 415px;
+    top: 62px;
+    width: 260px;
+    height: 260px;
+    background-image: url("../img/icon-cat-pro.svg");
+    z-index: 10;
+  }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: @desktop) {
   .categories {
     display: flex;
     justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
   }
+
   .categories__item {
     width: 464px;
     padding: 53px;
   }
+
   .categories__header {
-    margin-top: 80px;
-    margin-bottom: 70px;
-    margin-left: 215px;
+    margin: 24px 0 0 160px;
+    padding: 0 0 24px 0;
   }
+
   .categories__description {
     width: auto;
+    margin: 50px 0 10px 0;
+  }
+
+  .categories__header::before {
+    width: 100px;
+    height: 100px;
+    left: 52px;
+    top: 46px;
+    z-index: 5;
+  }
+
+  .categories__icon-slim {
+    left: 50px;
+    top: 38px;
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/icon-cat-slim.svg");
+    z-index: 10;
+  }
+
+  .categories__icon-pro {
+    left: 36px;
+    top: 46px;
+    width: 132px;
+    height: 100px;
+    background-image: url("../img/icon-cat-pro.svg");
+    z-index: 10;
+  }
+
+  .categories__site {
+    margin-left: 0;
   }
 }

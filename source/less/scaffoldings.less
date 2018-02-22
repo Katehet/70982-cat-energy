@@ -1,3 +1,20 @@
+@font-face {
+  font-family: "OswaldRegular";
+  src: url("../fonts/oswaldregular.woff2") format("woff2"),
+      url("../fonts/oswaldregular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "OswaldMedium";
+  src: url("../fonts/oswaldmeduim.woff2") format("woff2"),
+      url("../fonts/oswaldmeduim.woff") format("woff");
+}
+
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+
 html {
   .oswald(14px; 14px);
   color: @blackFont;
@@ -6,48 +23,68 @@ html {
   cursor: default;
 }
 body {
+  margin: 0;
+  padding: 0;
+  background-color: @white;
+}
+
+.container {
   width: 320px;
-//  width: auto;
   margin: 0 auto;
   background-color: @white;
 }
+
 a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
 }
-.mobile-only {
+
+.tablet-only,
+.desktop-only {
   display: none;
 }
-.mobile-only.no-js-menu {
-  display: block;
+
+.block-title {
+  .oswald(36px; 36px);
 }
-.image-tablet {
-  display: none;
-}
-@media (min-width: 768px) {
-  body {
-    width: 768px;
-//    width: auto;
+
+@media (min-width: @tablet) {
+  .container {
+    min-width: @tablet;
+    margin: 0 auto;
     position: relative;
     background-repeat: no-repeat;
     background-position: 0 0px;
   }
-  .image-mobile {
+
+  .mobile-only,
+  .desktop-only {
     display: none;
   }
-  .image-tablet {
+
+  .tablet-only {
     display: inline-block;
   }
-  .mobile-only {
-    display: flex;
-  }
-  .mobile-only.no-js-menu {
-    display: none;
+
+  .block-title {
+    .oswald(60px; 60px);
   }
 }
-@media (min-width: 1300px) {
-  body {
-    width: 1300px;
+
+@media (min-width: @desktop) {
+  .container {
+    min-width: @desktop;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .mobile-only,
+  .tablet-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: inline-block;
   }
 }

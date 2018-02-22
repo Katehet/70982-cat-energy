@@ -2,68 +2,90 @@
   .outline;
   position: relative;
 }
+
 .main-menu__list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style: none;
   text-align: center;
 }
+
+.main-menu__list.mobile-menu {
+  display: none;
+}
+
 .main-menu__item {
-  margin: 23px;
+  padding: 23px 0;
   font-family: "OswaldMedium";
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
   border-top: 1px solid #cdcdcd;
 }
+
 .main-menu__item:hover {
   opacity: 0.6;
 }
+
 .main-menu__item:active {
   opacity: 0.3;
 }
+
 .main-menu__button {
   position: absolute;
   right: 20px;
-  top: -46px;
+  top: -43px;
   width: 25px;
   height: 20px;
   padding: 0;
   font-size: 0;
-  background-image:  url("../img/mobile/icon-mobile-menu.svg");
+  background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
   background-color: transparent;
-  border:
-    none;
+  border: none;
   outline: none;
   cursor: pointer;
 }
+
 .main-menu--opened .main-menu__button {
-  background-image:  url("../img/mobile/icon-close.svg");
+  background-image: url("../img/icon-close.svg");
 }
 // no JS - no "burger"
 .no-js-button {
   display: none;
 }
-@media (min-width: 768px) {
+
+@media (min-width: @tablet) {
   .main-menu {
     display: flex;
     justify-content: space-between;
   }
+
   .main-menu__list {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
+    margin-right: 12px;
   }
+
+  .main-menu__list.mobile-menu {
+    display: flex;
+  }
+
   .main-menu__button {
     display: none;
   }
+
   .main-menu__item {
     .oswald(18px; 18px);
     position: relative;
     border: none;
+    padding: 0;
+    margin: 0 18px;
   }
+
   .main-menu__item--active::after {
     position: absolute;
     content: "";
@@ -71,16 +93,29 @@
     height: 2px;
     background-color: @green;
     left: 0;
-    top: 28px;
+    top: 30px;
   }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: @desktop) {
   .main-menu {
-    margin-right: 90px;
+    margin-right: 20px;
     z-index: 2;
   }
+
   .index-menu {
     color: @white;
+  }
+
+  .main-menu__list {
+    margin-right: 0;
+  }
+
+  .main-menu__item {
+    .oswald(20px; 24px);
+  }
+
+  .main-menu__item--active::after {
+    top: 32px;
   }
 }
