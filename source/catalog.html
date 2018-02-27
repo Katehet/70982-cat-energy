@@ -9,21 +9,26 @@
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/picturefill.min.js"></script>
 </head>
 
 <body>
+  <div style="display:none">
+    <include src="build/img/svg/sprite.svg"></include>
+  </div>
+
   <div class="container">
     <header class="header">
       <div class="top-bar">
         <a class="top-bar__logo" href="index.html">
           <picture>
-            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="page-logo__image" src="img/logo-mobile.svg" alt="logo" width="33" height="38">
+            <source media="(min-width: 1300px)" srcset="img/svg/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg">
+            <img class="top-bar__logo-image" src="img/svg/logo-mobile.svg" alt="logo" width="33" height="38">
           </picture>
         </a>
         <a class="top-bar__title">
-          <img class="top-bar__title-image mobile-only" src="img/logo-mobile-header.svg" alt="logo" width="101" height="18">
+          <img class="top-bar__title-image mobile-only" src="img/svg/logo-mobile-header.svg" alt="logo" width="101" height="18">
         </a>
       </div>
       <nav class="main-menu">
@@ -48,9 +53,9 @@
           <article class="catalog__item item">
             <div class="item__wrapper">
               <picture>
-                <source media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.png 1x, img/chicken-small-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x" class="item__photo tablet-only">
-                <img src="img/chicken-small-mobile@1x.jpg" srcset="img/chicken-small-mobile@2x.jpg 2x" class="item__photo mobile-only" alt="Cat Energy" width="140" height="144">
+                <source media="(min-width: 1300px)" srcset="img/products/chicken-small-desktop@1x.png 1x, img/products/chicken-small-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/products/chicken-small-tablet@1x.png 1x, img/products/chicken-small-tablet@2x.png 2x">
+                <img src="img/products/chicken-small-mobile@1x.jpg" srcset="img/products/chicken-small-mobile@2x.jpg 2x" class="item__photo" alt="Cat Energy" width="140" height="144">
               </picture>
               <div class="item__description">
                 <h2 class="item__name">Cat Energy pro 500 г</h2>
@@ -75,9 +80,9 @@
           <article class="catalog__item item">
             <div class="item__wrapper">
               <picture>
-                <source media="(min-width: 1300px)" srcset="img/chicken-big-desktop@1x.png 1x, img/chicken-big-desktop@2x.png 2x" class="item__photo desktop-only">
-                <source media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.png 1x, img/chicken-big-tablet@2x.png 2x" class="item__photo tablet-only">
-                <img src="img/chicken-big-mobile@1x.jpg" srcset="img/chicken-big-mobile@2x.jpg 2x" class="item__photo mobile-only" alt="Cat Energy" width="140" height="144">
+                <source media="(min-width: 1300px)" srcset="img/products/chicken-big-desktop@1x.png 1x, img/products/chicken-big-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/products/chicken-big-tablet@1x.png 1x, img/products/chicken-big-tablet@2x.png 2x">
+                <img src="img/products/chicken-big-mobile@1x.jpg" srcset="img/products/chicken-big-mobile@2x.jpg 2x" class="item__photo" alt="Cat Energy" width="140" height="144">
               </picture>
               <div class="item__description">
                 <h2 class="item__name">Cat Energy pro 1000 г</h2>
@@ -102,9 +107,9 @@
           <article class="catalog__item item">
             <div class="item__wrapper">
               <picture>
-                <source media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.png 1x, img/fish-small-desktop@2x.png 2x" class="item__photo desktop-only">
-                <source media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x" class="item__photo tablet-only">
-                <img src="img/fish-small-mobile@1x.jpg" srcset="img/fish-small-mobile@2x.jpg 2x" class="item__photo mobile-only" alt="Cat Energy" width="140" height="144">
+                <source media="(min-width: 1300px)" srcset="img/products/fish-small-desktop@1x.png 1x, img/products/fish-small-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/products/fish-small-tablet@1x.png 1x, img/products/fish-small-tablet@2x.png 2x">
+                <img src="img/products/fish-small-mobile@1x.jpg" srcset="img/products/fish-small-mobile@2x.jpg 2x" class="item__photo" alt="Cat Energy" width="140" height="144">
               </picture>
               <div class="item__description">
                 <h2 class="item__name">Cat Energy pro 500 г</h2>
@@ -129,9 +134,9 @@
           <article class="catalog__item item">
             <div class="item__wrapper">
               <picture>
-                <source media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.png 1x, img/fish-big-desktop@2x.png 2x" class="item__photo desktop-only">
-                <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x" class="item__photo tablet-only">
-                <img src="img/fish-big-mobile@1x.jpg" srcset="img/fish-big-mobile@2x.jpg 2x" class="item__photo mobile-only" alt="Cat Energy" width="140" height="144">
+                <source media="(min-width: 1300px)" srcset="img/products/fish-big-desktop@1x.png 1x, img/products/fish-big-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/products/fish-big-tablet@1x.png 1x, img/products/fish-big-tablet@2x.png 2x">
+                <img src="img/products/fish-big-mobile@1x.jpg" srcset="img/products/fish-big-mobile@2x.jpg 2x" class="item__photo" alt="Cat Energy" width="140" height="144">
               </picture>
               <div class="item__description">
                 <h2 class="item__name">Cat Energy pro 1000 г</h2>
@@ -156,9 +161,9 @@
           <article class="catalog__item item">
             <div class="item__wrapper">
               <picture>
-                <source media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.png 1x, img/buckwheat-small-desktop@2x.png 2x" class="item__photo desktop-only">
-                <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.png 2x" class="item__photo tablet-only">
-                <img src="img/buckwheat-small-mobile@1x.jpg" srcset="img/buckwheat-small-mobile@2x.jpg 2x" class="item__photo mobile-only" alt="Cat Energy" width="140" height="144">
+                <source media="(min-width: 1300px)" srcset="img/products/buckwheat-small-desktop@1x.png 1x, img/products/buckwheat-small-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/products/buckwheat-small-tablet@1x.png 1x, img/products/buckwheat-small-tablet@2x.png 2x">
+                <img src="img/products/buckwheat-small-mobile@1x.jpg" srcset="img/products/buckwheat-small-mobile@2x.jpg 2x" class="item__photo" alt="Cat Energy" width="140" height="144">
               </picture>
               <div class="item__description">
                 <h2 class="item__name">Cat Energy slim 500 г</h2>
@@ -183,9 +188,9 @@
           <article class="catalog__item item">
             <div class="item__wrapper">
               <picture>
-                <source media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.png 1x, img/buckwheat-big-desktop@2x.png 2x" class="item__photo desktop-only">
-                <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x" class="item__photo tablet-only">
-                <img src="img/buckwheat-big-mobile@1x.jpg" srcset="img/buckwheat-big-mobile@2x.jpg 2x" class="item__photo mobile-only" alt="Cat Energy" width="140" height="144">
+                <source media="(min-width: 1300px)" srcset="img/products/buckwheat-big-desktop@1x.png 1x, img/products/buckwheat-big-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/products/buckwheat-big-tablet@1x.png 1x, img/products/buckwheat-big-tablet@2x.png 2x">
+                <img src="img/products/buckwheat-big-mobile@1x.jpg" srcset="img/products/buckwheat-big-mobile@2x.jpg 2x" class="item__photo" alt="Cat Energy" width="140" height="144">
               </picture>
               <div class="item__description">
                 <h2 class="item__name">Cat Energy slim 1000 г</h2>
@@ -210,9 +215,9 @@
           <article class="catalog__item item">
             <div class="item__wrapper">
               <picture>
-                <source media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.png 1x, img/rice-small-desktop@2x.png 2x" class="item__photo desktop-only">
-                <source media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.png 2x" class="item__photo tablet-only">
-                <img src="img/rice-small-mobile@1x.jpg" srcset="img/rice-small-mobile@2x.jpg 2x" class="item__photo mobile-only" alt="Cat Energy" width="140" height="144">
+                <source media="(min-width: 1300px)" srcset="img/products/rice-small-desktop@1x.png 1x, img/products/rice-small-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/products/rice-small-tablet@1x.png 1x, img/products/rice-small-tablet@2x.png 2x">
+                <img src="img/products/rice-small-mobile@1x.jpg" srcset="img/products/rice-small-mobile@2x.jpg 2x" class="item__photo" alt="Cat Energy" width="140" height="144">
               </picture>
               <div class="item__description">
                 <h2 class="item__name">Cat Energy slim 500 г</h2>
@@ -297,8 +302,8 @@
           </div>
         </div>
         <div class="contacts__map">
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2034ac6c9f70dd670c70f7ab75b84365876837213bdaba4ac20f069ca92cd1ce&amp;source=constructor" width="1300" height="400"></iframe>
-          <span class="contacts__map-pin"></span>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2034ac6c9f70dd670c70f7ab75b84365876837213bdaba4ac20f069ca92cd1ce&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+            <span class="contacts__map-pin"></span>
         </div>
       </section>
       <footer class="page-footer">
@@ -327,7 +332,7 @@
         <div class="page-footer__producer producer">
           <a href="https://htmlacademy.ru/intensive/adaptive" class="producer__company">HTML Academy</a>
           <a href="https://htmlacademy.ru/intensive/adaptive" class="producer__logo">
-            <img class="producer__logo-image" src="img/logo-htmlacademy.svg" alt="HTMLAcademy" width="27" height="34">
+            <img class="producer__logo-image" src="img/svg/logo-htmlacademy.svg" alt="HTMLAcademy" width="27" height="34">
           </a>
         </div>
       </footer>

@@ -70,6 +70,7 @@
 
 .example__image {
   position: relative;
+  min-width: 320px;
 }
 
 .example__toggle-bar {
@@ -181,7 +182,6 @@
     align-items: center;
     margin-top: 40px;
     padding-bottom: 28px;
-    background: linear-gradient(@white 28%, @grayBack 28%);
   }
 
   .example__toggle-bar {
@@ -225,8 +225,8 @@
     align-content: space-between;
     align-items: flex-start;
     height: 625px;
-    background-color: transparent;
-    outline: 1px solid red;
+    // background-color: transparent;
+    background: linear-gradient(@white 26%, @grayBack 26%);
   }
 
   .example__title {
@@ -259,10 +259,6 @@
   .example__live {
     margin-bottom: 0;
     margin-top: 0;
-  }
-
-  .example__image {
-    .outline;
   }
 
   .example__toggle-bar {

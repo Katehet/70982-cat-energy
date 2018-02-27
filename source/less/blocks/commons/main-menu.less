@@ -40,7 +40,7 @@
   height: 20px;
   padding: 0;
   font-size: 0;
-  background-image: url("../img/icon-mobile-menu.svg");
+  background-image: url("../img/svg/icon-mobile-menu.svg");
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
@@ -49,7 +49,7 @@
 }
 
 .main-menu--opened .main-menu__button {
-  background-image: url("../img/icon-close.svg");
+  background-image: url("../img/svg/icon-close.svg");
 }
 // no JS - no "burger"
 .no-js-button {
@@ -102,15 +102,13 @@
     z-index: 2;
   }
 
-  .index-menu {
-    color: @white;
-  }
-
   .main-menu__list {
     margin-right: 0;
   }
 
   .main-menu__item {
+    color: @white;
+    text-shadow: 2px 2px 1px @green;
     .oswald(20px; 24px);
   }
 

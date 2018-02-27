@@ -9,21 +9,26 @@
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/picturefill.min.js"></script>
 </head>
 
 <body>
+  <div style="display:none">
+    <include src="build/img/svg/sprite.svg"></include>
+  </div>
+
   <div class="container">
   <header class="header" id="header">
     <div class="top-bar">
       <a class="top-bar__logo">
         <picture>
-          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="page-logo__image" src="img/logo-mobile.svg" alt="logo" width="33" height="38">
+          <source media="(min-width: 1300px)" srcset="img/svg/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg">
+          <img class="top-bar__logo-image" src="img/svg/logo-mobile.svg" alt="logo">
         </picture>
       </a>
       <a class="top-bar__title">
-        <img class="top-bar__title-image mobile-only" src="img/logo-mobile-header.svg" alt="logo" width="101" height="18">
+        <img class="top-bar__title-image mobile-only" src="img/svg/logo-mobile-header.svg" alt="logo" width="101" height="18">
       </a>
     </div>
       <nav class="main-menu index-menu">
@@ -48,9 +53,9 @@
           <p class="landing__slogan">Занялся собой? Займись котом!</p>
       </div>
       <picture>
-        <source media="(min-width: 1300px)" class="landing__promo-image desktop-only" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
-        <source media="(min-width: 768px)" class="landing__promo-image tablet-only" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
-        <img class="landing__promo-image mobile-only" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="promo image" width="280" height="271">
+        <source media="(min-width: 1300px)" srcset="img/products/index-can-desktop@1x.png 1x, img/products/index-can-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/products/index-can-tablet@1x.jpg 1x, img/products/index-can-tablet@2x.jpg 2x">
+        <img class="landing__promo-image" src="img/products/index-can-mobile@1x.png" srcset="img/products/index-can-mobile@2x.png 2x" alt="promo image">
       </picture>
       <a href="form.html" class="landing__select button">Подобрать программу</a>
     </section>
@@ -118,9 +123,9 @@
       <div class="example__live">
         <div class="example__image">
         <picture>
-            <source media="(min-width: 1300px)" class="example__image-before desktop-only" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" class="example__image-before tablet-only" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-            <img class="example__image-before mobile-only" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="pet-before" width="320" height="240">
+            <source media="(min-width: 1300px)" srcset="img/index-slider/before-desktop@1x.png 1x, img/index-slider/before-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index-slider/before-tablet@1x.png 1x, img/index-slider/before-tablet@2x.png 2x">
+            <img class="example__image" src="img/index-slider/before-mobile@1x.png" srcset="img/index-slider/before-mobile@2x.png 2x" alt="pet-before">
           </picture>
         </div>
         <div class="example__toggle-bar">
@@ -142,9 +147,8 @@
             <p class="contacts__wrap">Санкт-Петербург</p>
         </div>
       </div>
-      <div class="contacts__map">
-        <iframe class="contacts__live-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A2034ac6c9f70dd670c70f7ab75b84365876837213bdaba4ac20f069ca92cd1ce&amp;source=constructor" width="1300" height="362"></iframe>
-        <span class="contacts__map-pin"></span>
+      <div class="contacts__map" id="map">
+        <!-- <span class="contacts__map-pin"></span> -->
       </div>
     </section>
     <footer class="page-footer">
@@ -180,6 +184,8 @@
       </div>
     </footer>
   </main>
+  <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;"></script> -->
   <script src="js/script.js"></script>
   </div>
 </body>

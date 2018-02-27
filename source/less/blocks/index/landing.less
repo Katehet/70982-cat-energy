@@ -23,16 +23,22 @@
 .landing__promo {
   min-height: 305px;
   background-color: #63a83b;
-  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-image: url("../img/bg-images/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
+  background-size: cover;
   text-align: center;
   color: inherit;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-images/index-background-mobile@2x.jpg");
+  }
 }
 
 .landing__promo-image {
   position: absolute;
   top: 166px;
+  right: 20px;
 }
 
 .landing__select {
@@ -90,6 +96,7 @@
   .landing {
     min-height: 610px;
     margin-bottom: 68px;
+    margin-top: -20px;
   }
 
   .landing__promo {
@@ -99,9 +106,18 @@
 
   .landing__promo::before {
     position: absolute;
-    content: url("../img/desktop/index-background-desktop.jpg");
+    content: "";
+    width: 680px;
+    height: 696px;
     top: -100px;
     right: -100px;
+    background: @green url("../img/bg-images/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-images/index-background-desktop@2x.jpg");
+    }
   }
 
   .landing__promo-image {
